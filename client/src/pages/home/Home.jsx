@@ -10,7 +10,7 @@ const Home = () => {
       <ProfileSide/>
       <Postside/>
       <RightSide/>
-      <div className="Rightside">Rightside</div>
+      {/* <div className="Rightside">Rightside</div> */}
     </div>
   )
 }

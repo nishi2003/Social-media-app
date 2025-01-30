@@ -7,7 +7,7 @@ export const createPost = async (req, res) => {
     const newPost = new PostModel(req.body)
     try {
         await newPost.save()
-        res.status(200).json("Post Created!")
+        res.status(200).json(newPost)
     } catch (error) {
         res.status(500).json(error)
     }
@@ -80,7 +80,7 @@ export const likePost = async (req, res) => {
 }
 
 //get timeline post
-export const getTimeLinePost = async (req, res) => {
+export const getTimelinePosts = async (req, res) => {
     const userId = req.params.id
 
     try {
